@@ -1,4 +1,5 @@
-thout-graph \
+./b2 variant=release link=shared threading=multi runtime-link=shared \
+    --without-graph \
     --without-graph_parallel \
     --without-mpi \
     --withou-python \
@@ -14,7 +15,6 @@ tar zxvf /home/HarryWu/tmp/MPC_4_1_0.tar.gz \
 . ./setup.sh && . ./m.sh  && make
 
 # Finally, you will find output in ./lib & ./bin 
-
 
 ldd lib/libQuickFAST.so
 
