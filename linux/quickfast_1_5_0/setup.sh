@@ -7,14 +7,16 @@ SOURCE="${BASH_SOURCE[0]}"
 SOURCE_DIR=`dirname $SOURCE`
 export QUICKFAST_ROOT=`readlink -f $SOURCE_DIR`
 
+export DEPS_HOME="/home/HarryWu/github/quickfast/linux/deps"
+
 if test "$MPC_ROOT" = ""
 then
-  export MPC_ROOT=$ACE_ROOT/MPC
+  export MPC_ROOT=$DEPS_HOME/MPC
 fi
 
 if test "$BOOST_ROOT" = ""
 then
-  export BOOST_ROOT=~/boost/boost_1_38_0
+  export BOOST_ROOT=$DEPS_HOME/boost
 fi
 
 if test "$BOOST_ROOT_LIB" = ""
@@ -24,29 +26,29 @@ fi
 
 if test "$BOOST_VERSION" = ""
 then
-  export BOOST_VERSION=boost-1_38
+  export BOOST_VERSION=boost
 fi
 
-if test "$XERCES_ROOT" = ""
+if test "$XERCESCROOT" = ""
 then
-  export XERCES_ROOT=~/xerces/xerces-c-3.0.1
+  export XERCESCROOT=$DEPS_HOME/xerces
 fi
 
 if test "$XERCES_LIBPATH" = ""
 then
-  export XERCES_LIBPATH=$XERCES_ROOT/src/.libs
+  export XERCES_LIBPATH=$XERCESCROOT/lib
 fi
 
 if test "$XERCES_LIBNAME" = ""
 then
-  export XERCES_LIBNAME=xerces-c-3.0
+  export XERCES_LIBNAME=xerces-c-3.1
 fi
 
 if test "$XERCES_INCLUDE" = ""
 then
-  export XERCES_INCLUDE=$XERCES_ROOT/src
+  export XERCES_INCLUDE=$XERCESCROOT/include
 fi
 
 export PATH=$QUICKFAST_ROOT/bin:$MPC_ROOT:$PATH
-export LD_LIBRARY_PATH=$XERCESLIB:$QUICKFAST_ROOT/lib:$BOOST_ROOT_LIB:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$XERCES_LIBPATH:$QUICKFAST_ROOT/lib:$BOOST_ROOT_LIB:$LD_LIBRARY_PATH
 
