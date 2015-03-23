@@ -1,0 +1,13 @@
+// -*- MPC -*-
+// $Id: winapp.mpb 2215 2014-06-30 17:37:41Z elliott_c $
+
+project {
+  specific(em3, nmake, vc6) {
+    subsystem = windows
+  } else {
+    subsystem = 2
+  }
+  specific(vc10, vc11, vc12, vc14) {
+    subsystem = Windows
+  }
+}

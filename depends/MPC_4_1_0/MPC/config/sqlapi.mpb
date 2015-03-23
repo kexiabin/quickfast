@@ -1,0 +1,7 @@
+// $Id: sqlapi.mpb 2197 2014-03-21 16:38:12Z mitza $
+
+project {
+  includes += $(SQLAPI_ROOT)/include
+  libpaths += $(SQLAPI_ROOT)/lib
+  lit_libs += sqlapi
+}

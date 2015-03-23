@@ -17,11 +17,12 @@ REM Setting up QuickFAST environment
 @echo off
 REM =====================================================================================
 REM EDIT THE FOLLOWING LINES OR SET THESE VALUES IN YOUR ENVIRONMENT BEFORE RUNNING SETUP
-if "a" == "a%MPC_ROOT%" set MPC_ROOT=c:\MPC
-if "a" == "a%XERCES_ROOT%" set XERCES_ROOT=C:\Progs\xerces-c-3.0.1-x86-windows-vc-9.0
+@echo make sure to use MPC v4.1, config/boost_system.mpb is present
+if "a" == "a%MPC_ROOT%" set MPC_ROOT=D:\workspace\github\quickfast\depends\MPC_4_1_0\MPC
+if "a" == "a%XERCES_ROOT%" set XERCES_ROOT=D:\workspace\github\quickfast\depends\xerces
 if "a" == "a%XERCES_LIBNAME%" set XERCES_LIBNAME=xerces-c_3
-if "a" == "a%BOOST_VERSION%" set BOOST_VERSION=boost_1_43_0
-if "a" == "a%BOOST_ROOT%" set BOOST_ROOT=c:\boost\%BOOST_VERSION%
+if "a" == "a%BOOST_VERSION%" set BOOST_VERSION=boost_1_57_0
+if "a" == "a%BOOST_ROOT%" set BOOST_ROOT=D:\workspace\github\quickfast\depends\boost_1_57_0
 REM END OF VALUES TO BE SET
 REM =====================================================================================
 
@@ -96,7 +97,7 @@ if "a" == "a%BASE_INCLUDE%" set BASE_INCLUDE=%INCLUDE%
 
 set RELEASE_PATH=%QUICKFAST_ROOT%\bin;%QUICKFAST_ROOT%\Output\Release;%MPC_ROOT%;%BOOST_ROOT%\lib;%QUICKFAST_ROOT%\lib;%XERCES_ROOT%\bin;%BASE_PATH%
 set DEBUG_PATH=%QUICKFAST_ROOT%\bin;%QUICKFAST_ROOT%\Output\Debug;%MPC_ROOT%;%BOOST_ROOT%\lib;%QUICKFAST_ROOT%\lib;%XERCES_ROOT%\bin;%BASE_PATH%
-set PATH=%DEBUG_PATH%
+set PATH=%RELEASE_PATH%
 set INCLUDE=%BOOST_ROOT%;%XERCES_ROOT%\include;%BASE_INCLUDE%
 
 title QuickFAST

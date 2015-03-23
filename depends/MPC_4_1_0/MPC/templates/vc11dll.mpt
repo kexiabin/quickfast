@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: vc11dll.mpt 2210 2014-06-26 16:33:55Z elliott_c $
+
+conditional_include "vc11platforms"
+conditional_include "vc1xdll"
+conditional_include "user_vc11dll"

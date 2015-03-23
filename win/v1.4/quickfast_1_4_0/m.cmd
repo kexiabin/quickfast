@@ -8,4 +8,6 @@
 @REM Note: -expand_vars -use_env options force MPC to expand $(BOOST_ROOT) into the absolute path.  This avoids
 @REM        a problem that happened when people were starting Visual Studio from the Start menu rather than
 @REM        from the command line where the BOOST_ROOT environment had been defined.
+@rem set PATH=%PATH%;"D:\workspace\github\altcoin\mingw64\msys\1.0\bin"
+@rem perl "/d/workspace/github/quickfast/depends/MPC_3_6_0/MPC/mwc.pl" -expand_vars -use_env -type vc%VCVER% QuickFAST.mwc
 "%MPC_ROOT%\mwc.pl" -expand_vars -use_env -type vc%VCVER% QuickFAST.mwc

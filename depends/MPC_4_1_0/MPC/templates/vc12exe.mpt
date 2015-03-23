@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: vc12exe.mpt 2210 2014-06-26 16:33:55Z elliott_c $
+
+conditional_include "vc12platforms"
+conditional_include "vc1xexe"
+conditional_include "user_vc12exe"
