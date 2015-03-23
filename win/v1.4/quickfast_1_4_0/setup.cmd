@@ -100,7 +100,11 @@ set DEBUG_PATH=%QUICKFAST_ROOT%\bin;%QUICKFAST_ROOT%\Output\Debug;%MPC_ROOT%;%BO
 set PATH=%RELEASE_PATH%
 set INCLUDE=%BOOST_ROOT%;%XERCES_ROOT%\include;%BASE_INCLUDE%
 
-title QuickFAST
+title QuickFAST Setup Successfully!
+@echo ""
+@echo ""
+@echo "OK! QuickFAST Setup Successfully!"
+
 :end
 
 
