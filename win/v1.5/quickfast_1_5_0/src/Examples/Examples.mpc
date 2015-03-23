@@ -7,6 +7,7 @@
 
 project(InterpretApplication) : QuickFASTExample {
   exename = InterpretApplication
+  macros += BOOST_ALL_DYN_LINK BOOST_LIB_DIAGNOSTIC   
   Source_Files {
     InterpretApplication
   }
@@ -17,6 +18,7 @@ project(InterpretApplication) : QuickFASTExample {
 
 project(TutorialApplication) : QuickFASTExample {
   exename = TutorialApplication
+  macros += BOOST_ALL_DYN_LINK BOOST_LIB_DIAGNOSTIC     
   Source_Files {
     TutorialApplication
   }
@@ -27,6 +29,7 @@ project(TutorialApplication) : QuickFASTExample {
 
 project(PerformanceTest) : QuickFASTExample {
   exename = PerformanceTest
+  macros += BOOST_ALL_DYN_LINK BOOST_LIB_DIAGNOSTIC     
   Source_Files {
     PerformanceTest
   }
@@ -37,6 +40,7 @@ project(PerformanceTest) : QuickFASTExample {
 
 project(FileToTCP) : QuickFASTExample {
   exename = FileToTCP
+  macros += BOOST_ALL_DYN_LINK BOOST_LIB_DIAGNOSTIC     
   Source_Files {
     FileToTCP
   }
@@ -47,6 +51,7 @@ project(FileToTCP) : QuickFASTExample {
 
 project(FileToMulticast) : QuickFASTExample {
   exename = FileToMulticast
+  macros += BOOST_ALL_DYN_LINK BOOST_LIB_DIAGNOSTIC     
   Source_Files {
     FileToMulticast
   }
@@ -57,6 +62,7 @@ project(FileToMulticast) : QuickFASTExample {
 
 project(PCapToMulticast) : QuickFASTExample {
   exename = PCapToMulticast
+  macros += BOOST_ALL_DYN_LINK BOOST_LIB_DIAGNOSTIC     
   Source_Files {
     PCapToMulticast
   }
@@ -69,6 +75,7 @@ project(PCapToMulticast) : QuickFASTExample {
 project(OPRADecode) : QuickFASTExample {
   requires += opra_support
   exename = OPRADecode
+  macros += BOOST_ALL_DYN_LINK BOOST_LIB_DIAGNOSTIC     
   Source_Files {
     OPRA
   }
@@ -80,6 +87,7 @@ project(OPRADecode) : QuickFASTExample {
 project(SprywareFileDecoder) : QuickFASTExample {
   exename = SprywareFileDecoder
   requires += spryware_support
+  macros += BOOST_ALL_DYN_LINK BOOST_LIB_DIAGNOSTIC     
   Source_Files {
     SprywareFileDecoder
   }
