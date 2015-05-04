@@ -6,8 +6,6 @@
     |_|                                    
     
 
-=========
-
 repo for quickfast codecs.
 
 ###Install
